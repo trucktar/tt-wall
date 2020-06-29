@@ -41,3 +41,21 @@ class Image(models.Model):
         for k, v in kwargs.items():
             setattr(self, k, v)
         self.save()
+
+    @classmethod
+    def get_image_by_id(cls, image_id):
+        """Get image from database by id."""
+        image = cls.objects.get(pk=image_id)
+        return image
+
+    @classmethod
+    def search_image(cls, category):
+        """Find image from database by category."""
+        images = cls.objects.filter(category__category_name=category)
+        return images
+
+    @classmethod
+    def filter_by_location(cls, location):
+        """Filter images based on location."""
+        images = cls.objects.filter(location__location_name=location)
+        return images
