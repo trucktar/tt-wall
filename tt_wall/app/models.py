@@ -21,6 +21,9 @@ class Image(models.Model):
     image_desc = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
 
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
     def __str__(self):
         """Return a string representation of the model instance."""
         return self.image_name
