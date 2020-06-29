@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tt_wall.app',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
