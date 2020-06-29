@@ -1,0 +1,23 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% bootstrap_css %}
+
+  <title>TT-Wall</title>
+</head>
+
+<body class="bg-light">
+  {% include '_navbar.html' %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% bootstrap_javascript jquery='slim'%}
+</body>
+
+</html>
