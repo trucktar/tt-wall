@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Category, Image, Location
+from tt_wall.app.models import Category, Image, Location
 
 # Register your models here.
 admin.site.register(Image)
