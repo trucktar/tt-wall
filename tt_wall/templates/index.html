@@ -4,13 +4,17 @@
 <div class="container-md py-4">
   <div class="row">
     {% for image in images %}
-    <button class="col-sm-6 col-lg-4 mb-4 shadow-none btn btn-link" data-toggle="modal" data-target="#image-modal">
+    <button class="col-sm-6 col-lg-4 mb-4 shadow-none btn btn-link" data-toggle="modal" data-target="#image-modal"
+      data-imageurl="{{ request.scheme }}://{{ request.META.HTTP_HOST }}{{ image.image.url }}"
+      data-imagename="{{ image.image_name }}" data-imagedesc="{{ image.image_desc }}">
       <img style="height: 350px; max-width: 350px; width: 100%; object-fit: cover;"
-        class="img-thumbnail mx-auto d-block" alt="unsplash-img" src="{{ image.image.url }}">
+        class="img-thumbnail mx-auto d-block" alt="unsplash-img" src="{{ image.image.url }}"
+        alt="{{ image.image_name }}">
     </button>
     {% endfor %}
   </div>
 </div>
-{% endblock %}
 
 {% include '_modal.html' %}
+
+{% endblock %}
