@@ -1,3 +1,4 @@
+from cloudinary.models import CloudinaryField
 from django.db import models
 
 
@@ -32,7 +33,7 @@ class Location(models.Model, CrudMixin):
 
 
 class Image(models.Model, CrudMixin):
-    image = models.ImageField(upload_to='uploads/')
+    image = CloudinaryField('image')
     image_name = models.CharField(max_length=30)
     image_desc = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)

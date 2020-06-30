@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tt_wall.app',
     'bootstrap4',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,10 @@ TEMPLATES = [
         },
     },
 ]
+
+# Cloudinary
+# https://cloudinary.com/console/lui/select_framework/django
+CLOUDINARY_URL = env('CLOUDINARY_URL')
 
 # Bootstrap
 # https://django-bootstrap4.readthedocs.io/en/latest/index.html
