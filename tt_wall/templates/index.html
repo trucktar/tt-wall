@@ -3,21 +3,12 @@
 {% block content %}
 <div class="container-md py-4">
   <div class="row">
+    {% for image in images %}
     <button class="col-sm-6 col-lg-4 mb-4 shadow-none btn btn-link" data-toggle="modal" data-target="#image-modal">
       <img style="height: 350px; max-width: 350px; width: 100%; object-fit: cover;"
-        class="img-thumbnail mx-auto d-block" alt="unsplash-img"
-        src="https://images.unsplash.com/photo-1588612568467-a6b245a1f4a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80">
+        class="img-thumbnail mx-auto d-block" alt="unsplash-img" src="{{ image.image.url }}">
     </button>
-    <button class="col-sm-6 col-lg-4 mb-4 shadow-none btn btn-link" data-toggle="modal" data-target="#image-modal">
-      <img style="height: 350px; max-width: 350px; width: 100%; object-fit: cover;"
-        class="img-thumbnail mx-auto d-block" alt="unsplash-img"
-        src="https://images.unsplash.com/photo-1593286795554-deece94f015b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-    </button>
-    <button class="col-sm-6 col-lg-4 mb-4 shadow-none btn btn-link" data-toggle="modal" data-target="#image-modal">
-      <img style="height: 350px; max-width: 350px; width: 100%; object-fit: cover;"
-        class="img-thumbnail mx-auto d-block" alt="unsplash-img"
-        src="https://images.unsplash.com/photo-1593131087890-3632ad5f3231?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80">
-    </button>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
