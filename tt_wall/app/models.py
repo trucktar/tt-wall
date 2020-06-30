@@ -51,7 +51,7 @@ class Image(models.Model, CrudMixin):
         return image
 
     @classmethod
-    def search_image(cls, category):
+    def search_by_category(cls, category):
         """Find image from database by category."""
         images = cls.objects.filter(category__category_name=category)
         return images
