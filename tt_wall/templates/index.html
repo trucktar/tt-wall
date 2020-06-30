@@ -8,8 +8,7 @@
       data-imageurl="{{ request.scheme }}://{{ request.META.HTTP_HOST }}{{ image.image.url }}"
       data-imagename="{{ image.image_name }}" data-imagedesc="{{ image.image_desc }}">
       <img style="height: 350px; max-width: 350px; width: 100%; object-fit: cover;"
-        class="img-thumbnail mx-auto d-block" alt="unsplash-img" src="{{ image.image.url }}"
-        alt="{{ image.image_name }}">
+        class="img-thumbnail mx-auto d-block" src="{{ image.image.url }}" alt="{{ image.image_name }}">
     </button>
     {% endfor %}
   </div>
